@@ -1,0 +1,33 @@
+
+
+class Elma <T,U,V,Y,Z>{
+
+
+    // buradaki tvu lar yukardakilerden farklı 
+    public static <T,U,V> void bilgiVer(T a, U b, V c){
+        
+        System.out.println(a.getClass().getName());
+        System.out.println(b.getClass().getName());
+        System.out.println(c.getClass().getName());
+
+    }
+
+    // yukarıdan alacak bu sefer ayrı tuv değil bunlar.
+    public  void bilgiVer(T a, U b, V c){
+        
+        System.out.println(a.getClass().getName());
+        System.out.println(b.getClass().getName());
+        System.out.println(c.getClass().getName());
+
+    }
+
+
+
+
+}
+
+public class Driver{
+    public static void main(String[] args){
+        new Elma<String,String,Integer,Float,Long>();
+    }
+}
