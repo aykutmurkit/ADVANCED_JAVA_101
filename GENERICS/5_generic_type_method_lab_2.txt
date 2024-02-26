@@ -1,0 +1,36 @@
+
+class Helper{
+
+    //generic method type
+
+    public static <T> void butunDegerleriEkle(List<T> liste,T[] array){
+        for (T eleman: array){
+            liste.add(eleman);
+        }
+    }
+   
+
+
+
+}
+
+public class Driver{
+    public static void main(String [] args){
+        
+    Integer[] sayilar1 = {5,4,8,9,45, -5,0}    
+    List<Integer> // tip argümanı ilettik 
+
+    /*
+
+    List<Integer> liste = new ArrayList<>();
+    for(Integer sayi: sayilar1){
+        liste.add(sayi);
+    }
+
+    */
+
+    Helper.butunDegerleriEkle(liste,sayilar);
+
+    }
+}
+
