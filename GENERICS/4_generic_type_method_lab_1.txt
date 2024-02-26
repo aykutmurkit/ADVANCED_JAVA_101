@@ -1,0 +1,33 @@
+
+
+class Helper{
+
+    
+
+    //generic method type
+    public static <T> String getType(T degisken){
+        String [] kelimeler = degisken.getClass().getName().split("\\."); 
+        // burada iki tane yatay çizgi kullanmamızın sebebi nokta özel bir karakterdir kaçış karakteri kullarak kaçtık.
+       
+       String sinifIsmi = kelimeler[kelimeler.length()-1];
+       
+    
+        return sinifIsmi;
+    }
+
+
+
+}
+
+public class Driver{
+    public static void main(String [] args){
+        
+        int sayi = 5;
+        String isim = "aykutmurkit";
+        
+
+        System.out.println(Helper.getType(sayi));
+        System.out.println(Helper.getType(isim));
+    }
+}
+
