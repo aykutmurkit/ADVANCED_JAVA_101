@@ -1,0 +1,47 @@
+
+class Araba<T> {
+    private T marka;
+    private T model;
+    private T yil;
+
+
+    // generic type constructor
+    public araba(T marka,T model, T yil){
+        this.marka = marka;
+        this.model = model;
+        this.yil = yil;
+    }
+
+    public void bilgiVer(){
+        String bilgi= "Marka: "+marka+" Model: "+model+" Yıl: "+yil;
+        System.out.println(bilgi);
+    }
+
+    @Override
+    public String toString(){
+        return "Marka: "+marka+" Model: "+model+" Yıl: "+yil;
+    }
+
+}
+
+class Helper {
+    public void bilgiVer(){
+
+    }
+}
+
+
+public class Driver{
+    public static void main(String [] args){
+
+
+        Araba a1 = new Araba("Toyota","Corolla",2023); // typelar : String,String,Integer olur.
+        Araba a1 = new Araba("Peugeot",408,2023);  // typelar : String,Integer,Integer olur.
+
+        //amaaa
+
+        Araba a3 = new Araba<String> ("Mercedes-Benz","A180","2018");  bu şekilde constructora type gönderirsen hepsi string olur.
+
+   
+    }
+}
