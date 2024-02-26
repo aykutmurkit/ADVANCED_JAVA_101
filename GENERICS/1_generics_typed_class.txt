@@ -20,8 +20,6 @@ class GenericSinif{
     public String toString(){
         return "bu generic sınıf objesidir";
     }
-
-
 }
 
 public class Driver{
@@ -40,3 +38,7 @@ public class Driver{
 
     }
 }
+
+.
+.
+.
