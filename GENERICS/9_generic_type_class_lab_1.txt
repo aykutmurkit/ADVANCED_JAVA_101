@@ -1,0 +1,33 @@
+
+class Insan<T,U> {
+
+    private String isim;
+    private T boy;
+    private U kilo;
+
+    public Insan(String isim, T boy, U kilo){
+        this.isim = isim;
+        this.boy = boy;
+        this.kilo = kilo;
+    }
+
+    public void bilgiVer(){
+        System.out.println("Deger: "+isim+" Tip: "+isim.getClass().getName());
+        System.out.println("Deger: "+boy+" Tip: "+ boy.getClass().getName());
+        System.out.println("Deger: "+kilo+" Tip: "+kilo.getClass().getName());
+
+    }
+
+
+
+}
+
+public class driver{
+    public static void main(String [] args){
+
+        Insan i1 = new Insan("Aykut",1.70,95.5f); // tipleri String, double, Float
+        Insan i2 = new Insan("Mehmet",170,95.5);  // tipleri String, Integer, double 
+
+
+    }
+}
