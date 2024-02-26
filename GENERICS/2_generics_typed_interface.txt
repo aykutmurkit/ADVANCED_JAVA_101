@@ -1,0 +1,44 @@
+
+
+
+//genel tipli bir interface oluşturalım // parametreli arayüz oluşturacağız.
+
+//generic typed classlara parametreli sınıflarda denir.
+
+public interface Donusum<T1,T2>{
+    T1 cevir(T2 x);
+    T2 tersCevir(T1 x);
+}
+
+class Helper implements Donusum<String,Integer>{
+
+    @Override
+    public String cevir(Integer x){
+        return x.toString();
+    }
+
+    @Override
+    public Integer tersCevir(String x){
+        return Integer.parseInt(x);
+    }
+}
+
+
+
+
+public class Driver{
+    public static void main(String [] args){
+
+        Helper helper = new Helper();
+        String s1 = "878";
+        int sayi1 = "345";
+
+        System.out.println(helper.cevir(s1).getClass().getName());
+        System.out.println(helper.tersCevir(sayi1).getClass().getName());
+
+
+
+
+
+    }
+}
