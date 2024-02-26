@@ -1,0 +1,60 @@
+
+class Helper{
+
+    //generic method type
+
+    public static <T> void butunDegerleriEkle(List<T> liste,T[] array){
+        for (T eleman: array){
+            liste.add(eleman);
+        }
+    }
+   
+    pulblic static <T> void listeyiBas(List<T> liste){
+        for(T eleman: liste){
+            System.out.print(eleman+)
+        }
+    }
+
+    public static void listeyiBas2(List<?> liste){
+        for(Object o:liste){
+            System.out.print(o);
+        }
+    }
+
+
+
+}
+
+public class Driver{
+    public static void main(String [] args){
+        
+    Integer[] sayilar1 = {5,4,8,9,45, -5,0}    
+    List<Integer> // tip argümanı ilettik 
+
+    
+
+    List<Integer> liste = new ArrayList<>();
+    for(Integer sayi: sayilar1){
+        liste.add(sayi);
+    }
+
+    List<String> isimler = new ArrayList<>(){
+        {
+            add("Fatih");
+            add("Sultan");
+            add("Mehmet");
+        }
+    }
+
+
+    
+
+    Helper.butunDegerleriEkle(liste,sayilar);
+    Helper.listeyiBas(liste);
+    Helper.listeyiBas(isimler);
+    Helper.listeyiBas2(isimler);
+
+
+    }
+}
+
