@@ -1,0 +1,23 @@
+
+
+class Ogrenci <T,U,V>{
+    private T okulNo;
+    private U isim;
+    private V girisYili;
+
+
+    public Ogrenci(T okulNo, U isim, V girisYili){
+        this.okulNo = okulNo;
+        this.isim = isim;
+        this.girisYili = girisYili;
+    }
+}
+
+
+public class driver{
+    public static void main(String [] args){
+        Ogrenci o1 = new Ogrenci("1705010003","Aykut Mürkit","2017"); // string,string,string oldu.
+        Ogrenci o2 = new Ogrenci<Integer,String,Integer>(124,"Aykt mürkit",2017);  // Integer,String,Integer oldu
+        // bu şekilde veri tiplerimiz kesin bir şekilde belli olmuş oldu.
+    }
+}
