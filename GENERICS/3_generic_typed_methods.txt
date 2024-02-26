@@ -1,0 +1,30 @@
+
+
+class Helper{
+
+    public static String oldGetType(Object o){
+        return o.getClass().getName();
+    }
+
+    //generic method type
+    public static <T> String getType(T degisken){
+        return degisken.getClass().getName();
+    }
+
+
+
+}
+
+public class Driver{
+    public static void main(String [] args){
+        
+        int sayi = 5;
+        String isim = "aykutmurkit";
+        System.out.println(Helper.oldGetType(sayi));
+        System.out.println(Helper.oldGetType(isim));
+
+        System.out.println(Helper.getType(sayi));
+        System.out.println(Helper.getType(isim));
+    }
+}
+
