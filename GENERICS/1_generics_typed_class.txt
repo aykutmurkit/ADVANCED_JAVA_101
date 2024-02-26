@@ -9,7 +9,7 @@ Mesela ismi String yapıyorduk eskiden yada kiloyu integer yapıyorduk ancak şi
 .
 .
 .
-
+.
 
 class GenericSinif{
     private Object x;
