@@ -1,0 +1,82 @@
+class Helper{
+
+    public static void listeyiBas(List< ? extends Hayvan> liste){
+        for(object hayvan : liste){
+            System.out.print(hayvan);
+        }
+    }
+
+
+
+}
+
+
+
+class Hayvan{
+    private String isim;
+    
+    public Hayvan(String isim){
+        this.isim = isim;
+    }
+
+    public String getIsim(){
+        return isim;
+    }
+
+    public void setIsim(String isim){
+        this.isim = isim;
+    }
+
+    @Override
+    public String toString(){
+        return isim;
+    }
+}
+
+class Kedi extends Hayvan{
+    public Kedi(string isim){
+        super(isim);
+    }   
+    @Override
+    public String toString(){
+        return super.toString()+"MİYAV  ...";
+    }
+}
+
+class Kopek extends Hayvan{
+    public Kopek(String isim){
+        super(isim);
+    }
+    @Override
+    public String toString(){
+        return super.toString()+"HAV HAV ...";
+    }
+}
+
+public class Driver{
+    public static void main(String [] args){
+
+        ArrayList<Kedi> kediler = new ArrayList<>(){
+            {
+                add(new Kedi("Boncuk"));
+                add(new Kedi("Sarman"));
+                add(new Kedi(""Tekir"));
+            }
+        };
+
+
+
+        ArrayList<Kopek> kopekler = new ArrayList<>(){
+            {
+                add(new Kopek("Karabaş"));
+                add(new Kopek("Kangal"));
+            }
+        };
+
+
+
+
+
+
+    }
+}
