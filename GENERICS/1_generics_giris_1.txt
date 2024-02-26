@@ -1,0 +1,42 @@
+Generic typed class - genel tipli sınıflar
+
+Java'da generic type class, genel olarak parametreli tür (generic type) kullanarak oluşturulan bir sınıftır. 
+Bu sınıf, belirli bir türle çalışmak yerine, çalışma zamanında belirtilen türle çalışabilen bir yapıya sahiptir. 
+Generic type class'lar, aynı sınıfı farklı türlerle kullanma esnekliği sağlar.
+
+Mesela ismi String yapıyorduk eskiden yada kiloyu integer yapıyorduk ancak şimdi obje oluşturulurken karar verilecek.
+
+.
+.
+.
+
+
+class GenericSinif{
+    private Object x;
+
+    //getters and setters
+
+    @Override
+    public String toString(){
+        return "bu generic sınıf objesidir";
+    }
+
+
+}
+
+public class Driver{
+    public static void main(String [] args){
+        GenericSinif g1 = new GenericSinif();
+
+        System.out.println(g1.toString());
+        g1.setX(150);
+        System.out.println(g1.getX()); // 150 döner
+        System.out.println(g1.getX().getClass().getName()); // java.lang.Integer olarak döner değişkenin tipi oldu
+
+        g1.setX(150.0f);
+        System.out.println(g1.getX()); // 150 döner
+        System.out.println(g1.getX().getClass().getName()); // java.lang.Float olarak döner değişkenin tipi oldu
+
+
+    }
+}
