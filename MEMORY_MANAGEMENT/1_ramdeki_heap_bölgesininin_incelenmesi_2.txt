@@ -1,0 +1,14 @@
+1. objeleri depolamayı sağlayan alandır.
+2. heap'in boyutunun sınırı yoktur. dinamiktir daha doğrusu
+3. stack'e göre daha yavaş objelere ulaşır.
+
+
+ heap area - heap alandır
+ 
+ içinde old space - new space alan vardır.
+
+
+ old space eski kullanılmayan alan new space ise yeni ve kullanılan alan
+
+ garbage collection old spaceten fifo olarak nesneleri siler. free işlemi deniyor. serbest bırakmak.
+
