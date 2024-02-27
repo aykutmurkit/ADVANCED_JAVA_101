@@ -1,0 +1,47 @@
+
+## Stack nedir? ##
+
+1. geçici değişkenlerin depolandığı yer.
+2. bir işi yürütmek için kullanılır.
+3. yığında depolanan değişkenler onları oluşturan işlev çalıştığı sürece var olur.
+4. Boyutları kullanılan işletim sistemine göre değişiyor.
+5. Kullanılan bölgeler iş bitince başka programlarda kullanabilsin diye serbest bırakılıyor.
+
+// yerel değişkenler neden Stack'te depolanıyor?
+
+değişkenlerin yada objelerin ramdeki adreslerini tutuyor. bilgiden ziyade stakta o bilginin kaynağıdır.
+
+//stack methodları
+
+push değer eklemek için
+pop değer çıkarmak
+top yada peek en üstteki
+isEmpty var mı yok mu içi
+
+
+Sadece son eklenilen değer silinebilir.
+
+
+        Stack<Integer> yigin = new Stack<Integer>();
+        yigin.add(10);
+        yigin.add(20);
+        yigin.add(30);
+
+        System.out.println(yigin.peek());  // stack te en üsttekini verir.
+
+        yigin.pop(); // en üstteki değeri at demek.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Heap nedir? ##
