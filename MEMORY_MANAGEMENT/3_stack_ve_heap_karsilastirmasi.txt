@@ -1,0 +1,12 @@
+
+Stack --> statik hafıza tahsisi için kullanılıyor.
+          değişkenlere doğrudan erişilebiliyor.
+          program compile time da bellek tahsisi gerçekleşiyor.
+
+
+Heap --> dinamik hafıza tahsisi için kullanılıyor.
+         değişkenlere doğrudan ulaşılamaz. bu sebeple bir değere ulaşma konusunda stack daha hızlı
+         runtime esnasında hafıza tahsisi gerçekleşiyor.
+         
+
+
