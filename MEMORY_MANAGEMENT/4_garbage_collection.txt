@@ -1,0 +1,86 @@
+heapte referansı olmayan objelerin silinmesini sağlar
+
+'new' anahtar kelimesi = oluşan objenin bellekteki adresini geri döndürür.
+
+StartUp s1 = new StartUp();
+
+s1 = null; dersek s1 artık objeyi göstermiyor.
+
+obje boşa düştü. referansı yok. bu obje artık bir çöp oldu. bunu garbage collection ile ramdeki bu bölge kullanılabilir hale geliyor.
+
+.
+.
+.
+
+çöp toplama işlemini manuel olarakda yapabilirsin.
+
+class Meyve{
+    private String isim;
+
+    // constructors
+    //getters and setters
+
+    // finilize(); // obje silindikten sonra devreye giren methodtur.
+    //referansı olmayan objeler silindikten sonra otomatik olarak karşımıza çıkar.
+
+    @Override
+    public void finalize() throws throwable {
+        System.out.println(isim+" isimli  meyve objesi silindi");
+    }
+}
+
+
+public class Driver{
+    public static void main(String [] args){
+
+        Meybe m1 = new Meyve("Elma");
+        System.out.println(m1.getIsim());
+
+        m1 = null;
+
+        try {
+            System.out.println(m1.getIsim());
+        }
+        catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
+
+        bu anda garbege collection çalışmadı mesela 
+
+        1. Bir objenin adresinin null yapılması durumunda unreferenced object meydana gelir.
+
+        Meybe m2 = new Meyve("Armut"); // unreferenced object oldu
+        Meybe m3 = new Meyve("Kiraz");
+
+        m2 = m3 ;
+
+        şu an iki referansta m3 üçün gösterdiği nesneyi gösteriyor. yani kiraz.
+
+        m2 boşa düştü.
+
+        ############
+        ## CASE 2 ##
+        ############
+
+        Anonim obje oluşturursak adresi bilinmez.
+        oluşturulan objenin heap'teki adrsi elimizde yok.
+
+        // unreferenced object oldu.
+        System.out.println(new Meyve("Karpuz").getIsim());
+
+
+        kaldırmak için
+
+        System.gc();
+
+        ile garbage collector'u çağırabilirsin.
+
+
+
+
+
+
+
+    }
+}
+
