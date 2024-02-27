@@ -1,0 +1,68 @@
+public class Telefon implements Comparable<Telefon> {
+
+    private String marka;
+    private String model;
+    private int ram;
+    private int hafiza;
+    private int cikisYili;
+
+    // constructors
+    // getters and setters
+    // override toString
+
+    @Override
+    public int compareTo(Telefon 0){
+        if(cikisYili > o.cikisYili) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    }
+
+    public static void butunTelefonlariYazdir(List<Telefon> t){
+        for(telefon telefon: t){
+            System.out.println(telefon);
+        }
+    }
+
+}
+
+public class driver{
+    public static void main(String [] args){
+        
+        ArrayList<Telefon> telefonlar = new ArrayList<>(){
+            {
+                add.(new Telefon("Iphone","13",8,256,2021));
+                add.(new Telefon("Samsung","Note 5",12,256,2021));
+                add.(new Telefon("Xiaomi","Redmi Note 11",12,256,2023));
+                add.(new Telefon("Samsung","S24",16,256,2024));
+
+            }
+        }
+
+        Comparator<Telefon> dahaKucukHafıza = new Comparator<Telefon>(){
+
+            // hafızayı küçükten büyüye doğru sırala
+
+            @Override
+            public int compare(Telefon o1,Telefon o2){
+                if(o1.getHafiza() > o1.getHafiza()){
+                    return 1;
+                }
+                else{
+                    return -1;
+                }
+            }
+        };
+
+
+        // ram'e göre küçükten büyüğe sıralanış
+       Collections.sort(telefonlar,(tel1,tel2)->{
+            if(((Telefon).tel1).getRam() > ((Telefon).tel2).getRam()) return 1; else return -1;
+       });
+
+
+       
+    }
+}
